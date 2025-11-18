@@ -2,6 +2,31 @@
 
 > A single-file markdown sample that covers headings, lists, code, tables, images, links, emphasis, blockquotes, horizontal rules, footnotes, task lists, embedded HTML, math, and more.
 
+## Table of Contents
+- [Heading levels](#heading-levels)
+- [Emphasis](#emphasis)
+- [Line Breaks and Whitespace](#line-breaks-and-whitespace)
+- [Abbreviations](#abbreviations)
+- [Lists](#lists)
+- [Tables](#tables)
+- [Blockquotes](#blockquotes)
+- [Horizontal rules](#horizontal-rules)
+- [Footnotes](#footnotes)
+- [Emoji and special characters](#emoji-and-special-characters)
+- [Alerts](#alerts-github-specific)
+- [Mermaid Diagrams](#mermaid-diagrams)
+- [HTML blocks](#html-blocks)
+- [Code Examples with Comments](#code-examples-with-comments)
+- [Math (LaTeX)](#math-latex)
+- [Advanced Math (LaTeX)](#advanced-math-latex)
+- [Mixed content: headings, code, list combined](#mixed-content-headings-code-list-combined)
+- [Accessibility notes](#accessibility-notes)
+- [Sample YAML front matter](#sample-yaml-front-matter-for-static-site-generators)
+- [Example of a collapsible/details block](#example-of-a-collapsibledetails-block-html)
+- [Internationalization and special scripts](#internationalization-and-special-scripts)
+- [Metadata block](#metadata-block-html-comment)
+- [End of file](#end-of-file)
+
 ---
 
 ## Heading levels
@@ -80,8 +105,8 @@ Nested ordered/unordered:
 
 Task list (GitHub-style):
 - [x] Write sample file
-- [ ] Review formatting
-- [ ] Submit test
+- [x] Review formatting
+- [x] Submit test
 
 Definition list (using Markdown extension):
 Term 1
@@ -131,6 +156,29 @@ Table with links:
 |---------|------------------------------|
 | Google  | [Link](https://google.com)  |
 | GitHub  | [Link](https://github.com)  |
+
+Complex table with merged cells (using HTML):
+
+<table>
+  <tr>
+    <th rowspan="2">Feature</th>
+    <th colspan="2">Support</th>
+  </tr>
+  <tr>
+    <th>Markdown</th>
+    <th>HTML</th>
+  </tr>
+  <tr>
+    <td>Tables</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>Images</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+</table>
 
 ---
 
@@ -189,15 +237,38 @@ Here is a sentence with a footnote.[^1] And another one here.[^2]
 
 ---
 
+## Collapsible Section Example
+<details>
+  <summary>Click to expand additional tips</summary>
+  
+  - Use semantic HTML for better accessibility.
+  - Test your markdown in multiple renderers.
+  - Keep code blocks concise for readability.
+</details>
+
+---
+
+## Mermaid Diagrams
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+---
+
 ## HTML blocks
 
-<div style="border:1px solid #ccc; padding:8px;">
+<div style="border:1px solid #ccc; padding:8px;" role="region" aria-label="HTML block example">
   <strong>HTML block:</strong> You can include HTML for fine-grained control.
   <ul><li>Nested HTML list item A</li><li>Nested HTML list item B</li></ul>
 </div>
 
 HTML table example:
-<table border="1">
+<table border="1" role="table" aria-label="Sample HTML table">
   <tr>
     <th>Header 1</th>
     <th>Header 2</th>
@@ -209,10 +280,13 @@ HTML table example:
 </table>
 
 Sample cat image without alt text:
-![ ](https://raw.githubusercontent.com/thepinak503/Sample-Markdown/refs/heads/main/cat.jpg)
+![ ](./cat.jpg)
 
 Sample cat image with alt text:
-![Cute cat](https://raw.githubusercontent.com/thepinak503/Sample-Markdown/refs/heads/main/cat.jpg)
+![Cute cat](./cat.jpg)
+
+Embedded video (YouTube iframe):
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen aria-label="Embedded YouTube video"></iframe>
 
 ---
 
@@ -407,11 +481,58 @@ val age = 30
 println("Hello, $name!")
 ```
 
+Fenced code block (R):
+```r
+# script.R
+# Variables
+name <- "John Doe"
+age <- 30
+# Print
+cat("Hello,", name, "!")
+```
+
+Fenced code block (Scala):
+```scala
+// Main.scala
+object Main extends App {
+  val name = "John Doe"
+  val age = 30
+  println(s"Hello, $name!")
+}
+```
+
 Fenced code block (Diff):
 ```diff
 - old line
 + new line
   unchanged line
+```
+
+Fenced code block (TypeScript):
+```typescript
+// app.ts
+interface User {
+  name: string;
+  age: number;
+}
+
+const greetUser = (user: User): string => {
+  return `Hello, ${user.name}! You are ${user.age} years old.`;
+};
+
+const user: User = { name: "Alice", age: 30 };
+console.log(greetUser(user));
+```
+
+Fenced code block (Bash):
+```bash
+#!/bin/bash
+# script.sh
+echo "Current directory: $(pwd)"
+echo "Files in directory:"
+ls -la
+echo "Disk usage:"
+df -h
 ```
 
 ---
@@ -431,6 +552,21 @@ $$
 $$
 
 (If renderer doesn't support LaTeX, it should still show the raw delimiters.)
+
+Advanced LaTeX:
+
+Matrix:
+$$
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+$$
+
+Complex integral:
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
 
 ---
 
