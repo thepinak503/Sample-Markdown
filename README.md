@@ -280,10 +280,10 @@ HTML table example:
 </table>
 
 Sample cat image without alt text:
-![ ](./cat.jpg)
+![ ](https://raw.githubusercontent.com/thepinak503/Sample-Markdown/refs/heads/main/cat.jpg)
 
 Sample cat image with alt text:
-![Cute cat](./cat.jpg)
+![Cute cat](https://raw.githubusercontent.com/thepinak503/Sample-Markdown/refs/heads/main/cat.jpg)
 
 Embedded video (YouTube iframe):
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen aria-label="Embedded YouTube video"></iframe>
