@@ -1,5 +1,3 @@
-# Sample-Markdown
-Sample Markdown file
 # Sample Markdown File — Comprehensive Formatting Test
 
 > A single-file markdown sample that covers headings, lists, code, tables, images, links, emphasis, blockquotes, horizontal rules, footnotes, task lists, embedded HTML, math, and more.
@@ -209,6 +207,12 @@ HTML table example:
     <td>Data 2</td>
   </tr>
 </table>
+
+Sample cat image without alt text:
+![ ](https://placekitten.com/300/200)
+
+Sample cat image with alt text:
+![Cute cat](https://placekitten.com/400/300)
 
 ---
 
@@ -490,8 +494,8 @@ tags:
 
 ## Metadata block (HTML comment)
 <!--
-  Author: Pinak
-  Purpose: Test rendering of markdown features in echomind.
+  Author: DevTester
+  Purpose: Test rendering of markdown features in DevToys
 -->
 
 ---
