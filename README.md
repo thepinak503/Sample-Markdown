@@ -209,10 +209,10 @@ HTML table example:
 </table>
 
 Sample cat image without alt text:
-![ ](https://placekitten.com/300/200)
+![ ](https://raw.githubusercontent.com/thepinak503/Sample-Markdown/refs/heads/main/cat.jpg)
 
 Sample cat image with alt text:
-![Cute cat](https://placekitten.com/400/300)
+![Cute cat](https://raw.githubusercontent.com/thepinak503/Sample-Markdown/refs/heads/main/cat.jpg)
 
 ---
 
